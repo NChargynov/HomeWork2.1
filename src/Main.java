@@ -2,25 +2,28 @@ import java.awt.event.PaintEvent;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
+        createObject("Jack").print();
+        createObject("Peter").print();
+        createObject("Logan").print();
     }
 
-     public static Persons createObject(String namePersons) {
+     public static Printable createObject(String namePersons) {
 
+        Printable printable = null;
         switch (namePersons) {
             case "Jack":
-                Persons jack = new Jack("Pirate");
+                printable = new Jack("Pirate");
                 break;
             case "Peter":
-                Persons peter = new Peter(67.5);
+                printable = new Peter(67.5);
                 break;
             case "Logan":
-                Persons logan = new Logan("Wolwerine");
+                printable = new Logan("Wolwerine");
                 break;
         }
-        return Persons;
-        Persons = namePersons;
-    }
+        return printable;
 
+    }
 }
