@@ -1,29 +1,26 @@
+import java.awt.event.PaintEvent;
+
 public class Main {
 
     public static void main(String[] args) {
-        createObject("Jack");
-        createObject("Peter");
-        createObject("Logan");
 
     }
 
-    public static String createObject(String className) {
+     public static Persons createObject(String namePersons) {
 
-        switch (className) {
+        switch (namePersons) {
             case "Jack":
-                Jack jack = new Jack("Pirate");
-                jack.print();
+                Persons jack = new Jack("Pirate");
                 break;
             case "Peter":
-                Peter peter = new Peter(67.5);
-                peter.print();
+                Persons peter = new Peter(67.5);
                 break;
             case "Logan":
-                Logan logan = new Logan("Wolwerine");
-                logan.print();
+                Persons logan = new Logan("Wolwerine");
                 break;
         }
-        return className;
+        return Persons;
+        Persons = namePersons;
     }
 
 }
